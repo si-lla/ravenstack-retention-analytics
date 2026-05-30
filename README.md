@@ -1,24 +1,26 @@
-# RavenStack SaaS Retention & Customer Health Analytics
+# RavenStack SaaS Customer Retention Analytics
 
 ## Project Overview
 
-This project analyzes customer churn, subscription behavior, product engagement, and support experience for a fictional SaaS company called RavenStack.
+This project analyzes customer churn, customer health, product usage, support operations, and revenue performance for a fictional SaaS company called RavenStack.
 
-The objective of the project is to identify churn patterns, evaluate customer health indicators, and generate business insights using PostgreSQL.
+Using PostgreSQL and Power BI, the project identifies churn drivers, evaluates customer behavior, analyzes support efficiency, and uncovers revenue trends to support data-driven business decisions.
 
 ---
 
 ## Business Problem
 
-RavenStack is experiencing customer churn across different subscription tiers and industries.
+Customer retention is critical for SaaS companies because recurring revenue depends on long-term customer relationships.
 
-The company wants to understand:
+RavenStack aims to answer the following business questions:
 
-* Which customer segments are churning most
-* Whether product usage impacts retention
-* Whether support experience affects churn
-* Which accounts may be considered high-risk
-* Which industries require retention focus
+* Which customer segments are most likely to churn?
+* Which subscription plans generate the highest revenue?
+* Which industries contribute the most revenue?
+* How effective is customer support?
+* Which product features are most used?
+* Which product features generate the most errors?
+* What factors should be prioritized to improve customer retention?
 
 ---
 
@@ -28,64 +30,19 @@ The project uses five relational datasets:
 
 | Table           | Description                            |
 | --------------- | -------------------------------------- |
-| accounts        | Customer/company information           |
-| subscriptions   | Subscription plans and revenue details |
-| feature_usage   | Product engagement and usage metrics   |
+| accounts        | Customer profile and churn information |
+| subscriptions   | Subscription and revenue information   |
+| feature_usage   | Product engagement metrics             |
 | support_tickets | Customer support interactions          |
-| churn_events    | Customer churn and feedback records    |
+| churn_events    | Churn reasons and refund information   |
 
 ---
 
-## Database Schema
+## Data Model
 
-Main relationships:
+### Entity Relationship Diagram
 
-* accounts → subscriptions
-* subscriptions → feature_usage
-* accounts → support_tickets
-* accounts → churn_events
-
----
-
-## Key SQL Analysis Performed
-
-### 1. Overall Churn Rate Analysis
-
-Calculated overall churn percentage across subscriptions.
-
-### 2. Churn by Subscription Plan
-
-Compared churn rates across Basic, Pro, and Enterprise customers.
-
-### 3. Industry-Level Churn Segmentation
-
-Identified industries with elevated churn risk.
-
-### 4. Product Usage vs Churn
-
-Analyzed whether feature engagement impacts customer retention.
-
-### 5. Error Analysis
-
-Investigated whether product errors correlate with churn behavior.
-
-### 6. Support Satisfaction Analysis
-
-Evaluated the relationship between customer support experience and churn.
-
-### 7. Customer Health Analysis
-
-Combined product and support metrics to identify potentially high-risk accounts.
-
----
-
-## Key Business Insights
-
-* Enterprise customers showed the highest churn rate among subscription tiers.
-* Tools and Cybersecurity customers demonstrated elevated churn rates compared with other industries.
-* Product usage and support satisfaction alone showed weak correlation with churn behavior.
-* Churn behavior appears to be influenced by broader account and business factors.
-* Multi-factor customer health monitoring may improve proactive retention efforts.
+![ER Diagram](images/er_diagram.png)
 
 ---
 
@@ -94,21 +51,133 @@ Combined product and support metrics to identify potentially high-risk accounts.
 * PostgreSQL
 * SQL
 * pgAdmin
-* CSV datasets
-* Relational database modeling
+* Power BI
+* Data Modeling
+* Business Analytics
+* Data Visualization
 
 ---
 
-## Future Improvements
+# Dashboard Overview
 
-* Build an interactive Power BI dashboard
-* Develop a churn prediction model
-* Create a customer health scoring framework
-* Add cohort retention analysis
-* Automate reporting workflows
+## Executive Overview
+
+Provides a high-level business summary including:
+
+* Total Customers
+* Active Customers
+* Churned Customers
+* Churn Rate
+* Churn by Industry
+* Churn by Subscription Plan
+
+![Executive Overview](images/executive_overview.png)
+
+---
+
+## Customer Health Analytics
+
+Analyzes customer support performance and product engagement.
+
+Key metrics:
+
+* Support Tickets by Priority
+* Average Resolution Time by Priority
+* Average Satisfaction Score by Priority
+* Most Used Product Features
+* Errors by Feature
+
+![Customer Health Analytics](images/customer_health.png)
+
+---
+
+## Revenue Analytics
+
+Analyzes recurring revenue performance.
+
+Key metrics:
+
+* Monthly Recurring Revenue (MRR)
+* Annual Recurring Revenue (ARR)
+* Revenue by Industry
+* Revenue by Billing Frequency
+
+![Revenue Analytics](images/revenue_analytics.png)
+
+---
+
+## Churn Intelligence
+
+Analyzes customer churn patterns and business impact.
+
+Key metrics:
+
+* Customer Churn Distribution
+* Churn by Industry
+* Churn by Subscription Plan
+* Churn Reasons
+* Revenue Lost by Churn Reason
+
+![Churn Intelligence](images/churn_intelligence.png)
+
+---
+
+# Key Business Insights
+
+## Customer Retention
+
+* Dev/Tools represented the largest customer segment.
+* Dev/Tools customers exhibited the highest churn levels.
+* Enterprise customers showed the highest churn among subscription plans.
+
+## Revenue Performance
+
+* Enterprise plans generated the highest Monthly Recurring Revenue (MRR).
+* Enterprise plans generated the highest Annual Recurring Revenue (ARR).
+* FinTech customers contributed the highest recurring revenue.
+
+## Customer Support
+
+* Urgent tickets represented the highest support workload.
+* High-priority issues required the longest resolution times.
+* Low-priority issues achieved the highest customer satisfaction scores.
+
+## Product Analytics
+
+* Feature_32 was the most frequently used product feature.
+* Feature_4 generated the highest number of product errors.
+
+---
+
+# Business Recommendations
+
+1. Prioritize retention initiatives for Enterprise customers due to their high revenue contribution.
+2. Investigate churn drivers within the Dev/Tools customer segment.
+3. Improve monitoring and stability for Feature_4.
+4. Reduce resolution times for High-priority support tickets.
+5. Implement a proactive customer health scoring framework.
+6. Develop targeted retention strategies for high-value customers.
+
+---
+
+# Project Outcomes
+
+This project demonstrates:
+
+* Relational Database Design
+* SQL Query Development
+* Customer Churn Analysis
+* Revenue Analytics
+* Customer Health Analytics
+* Business Intelligence Dashboarding
+* Data Visualization
+* Business Insight Generation
+* Data Storytelling
 
 ---
 
 ## Author
 
-Silla Shaju
+**Silla Shaju**
+
+Postgraduate in Data Science
