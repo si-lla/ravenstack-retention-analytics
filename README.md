@@ -42,7 +42,7 @@ The project uses five relational datasets:
 
 ### Entity Relationship Diagram
 
-![ER Diagram](images/er_diagram.png)
+![ER Diagram](er_diagram.png)
 
 ---
 
@@ -71,7 +71,7 @@ Provides a high-level business summary including:
 * Churn by Industry
 * Churn by Subscription Plan
 
-![Executive Overview](images/executive_overview.png)
+![Executive Overview](executive_overview.png)
 
 ---
 
@@ -87,7 +87,7 @@ Key metrics:
 * Most Used Product Features
 * Errors by Feature
 
-![Customer Health Analytics](images/customer_health.png)
+![Customer Health Analytics](customer_health.png)
 
 ---
 
@@ -102,7 +102,7 @@ Key metrics:
 * Revenue by Industry
 * Revenue by Billing Frequency
 
-![Revenue Analytics](images/revenue_analytics.png)
+![Revenue Analytics](revenue_analytics.png)
 
 ---
 
@@ -118,7 +118,7 @@ Key metrics:
 * Churn Reasons
 * Revenue Lost by Churn Reason
 
-![Churn Intelligence](images/churn_intelligence.png)
+![Churn Intelligence](churn_intelligence.png)
 
 ---
 
